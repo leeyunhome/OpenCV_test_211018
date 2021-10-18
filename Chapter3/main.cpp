@@ -28,18 +28,24 @@ void ScalarOp()
 	destroyAllWindows();
 }
 
+void VectorOp();
+
 int main()
 {
 	std::cout << "Hello OpenCV " << CV_VERSION << std::endl;
 
+	//ScalarOp();
+	VectorOp();
+
+	return 0;
+}
+
+void VectorOp()
+{
 	Vec3b p1, p2(0, 0, 255);
 
 	p1.val[0] = 100;
 	p1[0] = 200;
 
 	cout << p1 << ", " << p2 << endl;
-
-	ScalarOp();
-
-	return 0;
 }
